@@ -1,0 +1,12 @@
+html, body {
+    height: 100%;
+  }
+
+.body-contenido{
+    background-color:    #fef9e7;
+    height: 100% !important;
+}
+
+.nav-var-contenido{
+    background-color:  #f9e79f !important ;
+}
