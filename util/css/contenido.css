@@ -10,3 +10,15 @@ html, body {
 .nav-var-contenido{
     background-color:  #f9e79f !important ;
 }
+
+.card-header-first{
+    background-color:  #abebc6  !important ;
+}
+
+.card-header-second{
+    background-color:   #d2b4de  !important ;
+}
+
+.card-header-third{
+    background-color:   #85929e  !important ;
+}

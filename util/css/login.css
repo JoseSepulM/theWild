@@ -12,3 +12,24 @@ html, body {
 .card-header-login{
     background-color:  #f9e79f !important ;
 }
+
+.img-login {
+    max-width: 50%;
+    max-height: 50%;
+}
+
+.a-hover:hover{
+    cursor: pointer;
+}
+
+.requirement-list li {
+    font-size: 0.7rem;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.requirement-list li span {
+    color: #6c757d;
+}
