@@ -1,3 +1,5 @@
+'use strict'
+
 function showHideCards(){
     
     const item_login = document.getElementById('item-login');
@@ -45,10 +47,69 @@ function recuperarContrasenia(){
     })
 }
 
-function login(){
-    const btn_login = document.getElementById('btn-login');
-    btn_login.addEventListener('click', () => {
-        window.location.href = "contenido.html";
+function login(){    
+    var forms = document.getElementById('form_login');
+    console.log(forms);
+    Array.prototype.slice.call(forms)
+        .forEach(function (form) {
+        form.addEventListener('submit', function (event) {
+            if (!form.checkValidity()) {
+                event.preventDefault()
+                event.stopPropagation()
+            }
+            form.classList.add('was-validated')
+        }, false)
+    })
+
+
+    const user = document.getElementById('txtNombreUsuario');
+    const pass = document.getElementById('txtClaveSecreta');
+}
+
+function validateNameUserRegister(){
+
+    const inputuser = document.getElementById('txtNameUserRegister');
+    inputuser.addEventListener('keyup', () => {
+
+        let textInput = inputuser.value;
+        if(textInput != ""){
+            let user = data_dataUsuarios.filter((element) => element.username == textInput);
+            if(user.length == 0){
+                inputuser.classList.remove('is-invalid');
+                inputuser.classList.add('is-valid');
+            }else{
+                inputuser.classList.remove('is-valid');
+                inputuser.classList.add('is-invalid');
+            }
+        }
+        else
+        {
+            inputuser.classList.remove('is-valid');
+            inputuser.classList.remove('is-invalid');
+        }
+    });
+}
+
+function validateEmailRegister(){
+    const inputEmail = document.getElementById('txtCorreoUserRegister');
+    inputEmail.addEventListener('keyup', () => {
+
+        let textInput = inputEmail.value;
+        if(textInput != ""){
+            let user = data_dataUsuarios.filter((element) => element.correo == textInput);
+            if(user.length == 0){
+                inputEmail.classList.remove('is-invalid');
+                inputEmail.classList.add('is-valid');
+            }else{
+                inputEmail.classList.remove('is-valid');
+                inputEmail.classList.add('is-invalid');
+            }
+        }
+        else
+        {
+            inputEmail.classList.remove('is-valid');
+            inputEmail.classList.remove('is-invalid');
+        }
     });
 }
 
@@ -57,4 +118,8 @@ document.addEventListener('DOMContentLoaded', (event) => {
     showHideCards();
     login();
     recuperarContrasenia();
+    validateEmailRegister();
+    validateNameUserRegister();
 });
+
+
