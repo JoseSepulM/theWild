@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 function showHideCards(){
     
@@ -47,23 +47,33 @@ function recuperarContrasenia(){
     })
 }
 
-function login(){    
-    var forms = document.getElementById('form_login');
-    console.log(forms);
-    Array.prototype.slice.call(forms)
-        .forEach(function (form) {
-        form.addEventListener('submit', function (event) {
-            if (!form.checkValidity()) {
-                event.preventDefault()
-                event.stopPropagation()
+function login(){
+
+    const toastLiveExample = document.getElementById('liveToast')
+    var toast = new bootstrap.Toast(toastLiveExample)
+
+    const buttonLogin = document.getElementById('btn-login')
+    buttonLogin.addEventListener('click', () => {
+
+        const user = document.getElementById('txtNombreUsuario').value;
+        const pass = document.getElementById('txtClaveSecreta').value;
+
+        const sessionUser = data_dataUsuarios.find((element) => element.username == user);
+        if(sessionUser){
+            if(sessionUser.password == pass){
+                
+                window.location.href = (sessionUser.role == 'admin' ? 'contenido.html' : 'contenidoUsers.html');
             }
-            form.classList.add('was-validated')
-        }, false)
+            else
+            {
+                toast.show();
+            }
+        }
+        else
+        {
+            toast.show();
+        }
     })
-
-
-    const user = document.getElementById('txtNombreUsuario');
-    const pass = document.getElementById('txtClaveSecreta');
 }
 
 function validateNameUserRegister(){

@@ -45,33 +45,32 @@
                                                 <h1 class="fw-light">The Wild</h1>
                                             </div>
                                         </div>
-                                        <form id="form_login" class="need-validation" novalidate>
-                                            <div class="row mt-3">
-                                                <div class="col">
-                                                    <div class="input-group mb-3">
-                                                        <span class="input-group-text" id="basic-addon1"></span>
-                                                        <input type="text" class="form-control" id="txtNombreUsuario" placeholder="Nombre usuario" required>
-                                                    </div>
+                                        <div class="row mt-3">
+                                            <div class="col">
+                                                <div class="input-group mb-3">
+                                                    <span class="input-group-text" id="basic-addon1"></span>
+                                                    <input type="text" class="form-control" id="txtNombreUsuario" placeholder="Nombre usuario" required>
                                                 </div>
                                             </div>
-                                            <div class="row">
-                                                <div class="col">
-                                                    <div class="input-group mb-3">
-                                                        <span class="input-group-text" id="basic-addon1"></span>
-                                                        <input type="text" class="form-control" id="txtClaveSecreta" placeholder="Clave secreta" required>
-                                                    </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col">
+                                                <div class="input-group mb-3">
+                                                    <span class="input-group-text" id="basic-addon1"></span>
+                                                    <input type="password" class="form-control" id="txtClaveSecreta" placeholder="Clave secreta" required>
                                                 </div>
                                             </div>
-                                            <div class="row justify-content-between">
-                                                <div class="col"><a class="link-secondary a-hover" id="link_contrasenia">Olvide mi contraseña</a></div>
-                                                <div class="col"><a class="link-secondary a-hover" id="link_registro">Deseo registrarme</a></div>
+                                        </div>
+                                        <div class="row justify-content-between">
+                                            <div class="col"><a class="link-secondary a-hover" id="link_contrasenia">Olvide mi contraseña</a></div>
+                                            <div class="col"><a class="link-secondary a-hover" id="link_registro">Deseo registrarme</a></div>
+                                        </div>
+                                        <div class="row mt-5">
+                                            <div class="col">
+                                                <button id="btn-login" type="button" class="btn btn-outline-success w-100">Ingresar</button>
                                             </div>
-                                            <div class="row mt-5">
-                                                <div class="col">
-                                                    <button id="btn-login" type="submit" class="btn btn-outline-success w-100">Ingresar</button>
-                                                </div>
-                                            </div>
-                                        </form>
+                                        </div>
+                                        
                                     </div>
                                     <div id="dv_register" class="d-none">
                                         <div class="row">
@@ -157,4 +156,17 @@
             </div>
         </div>
     </div>
-  </div>
+</div>
+<div class="position-fixed bottom-0 end-0 p-3" style="z-index: 11">
+    <div id="liveToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast-header">
+            <img src="..." class="rounded me-2" alt="...">
+            <strong class="me-auto">Alerta</strong>
+            <small>No se puede ingresar</small>
+            <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            Usuario o contraseña no correctos....
+        </div>
+    </div>
+</div>

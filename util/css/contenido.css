@@ -11,6 +11,7 @@ html, body {
     background-color:  #f9e79f !important ;
 }
 
+
 .card-header-first{
     background-color:  #abebc6  !important ;
 }
@@ -25,4 +26,53 @@ html, body {
 
 .card-header-fourth{
     background-color:  #f5b7b1 !important ;
+}
+
+.spn_text_title{
+    color: #2c3e50  !important;
+}
+
+.spn_text_info{
+    color: #85929e !important;
+}
+
+.spn_text_info:hover{
+    color: #85929e;
+    text-decoration: underline !important;
+    cursor: pointer !important;
+}
+
+.table-text-color{
+    color: #2c3e50  !important;
+}
+
+.scrollable-div {
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.requirement-list li {
+    font-size: 0.7rem;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.requirement-list li span {
+    color: #6c757d  !important;
+}
+
+.card_question{
+    color: #6c757d !important;
+}
+
+.card_question:hover{
+    cursor: pointer !important;
+    background-color: aliceblue !important;   
+}
+
+.card_response{
+    background-color: #f4efdd;
+    color: #6c757d !important;
 }

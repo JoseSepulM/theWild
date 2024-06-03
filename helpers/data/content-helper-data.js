@@ -1,8 +1,8 @@
 const dataMenu = [
     {
         idMenu  : '1',
-        name    : 'Inicio',
-        url     : 'dashboard.html',
+        name    : 'Dashboard',
+        url     : 'contenido.html',
         role    : 'admin'
     },
     {
@@ -13,14 +13,14 @@ const dataMenu = [
     },
     {
         idMenu  : '3',
-        name    : 'Usuarios',
-        url     : 'usuarios.html',
-        role    : 'admin'
+        name    : 'Mis preguntas',
+        url     : 'contenidoUsers.html',
+        role    : 'user'
     },
-    {
-        idMenu  : '4',
-        name    : 'Usuarios',
-        url     : 'usuarios.html',
-        role    : 'admin'
-    }
+//     {
+//         idMenu  : '4',
+//         name    : 'Foros',
+//         url     : 'foros.html',
+//         role    : 'user'
+//     }
 ]
